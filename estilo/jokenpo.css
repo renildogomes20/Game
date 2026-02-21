@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Honk:MORF@15&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --font-destaque: "Honk", system-ui;
+    --font-normal: "Audiowide", sans-serif;
+    --font-padrão: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-image: linear-gradient(to right, rgba(142, 163, 233, 0.911), rgb(74, 125, 155));
+}
+
+section {
+    margin-top: 50px;
+    width: 320px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+div {
+    margin-top: 20px;
+}
+h1 {
+    text-align: center;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(0, 0, 0, 0.336);
+    padding: 6px;
+    box-shadow: 4px 10px 5px rgba(0, 0, 0, 0.541);
+    animation: flutuar 1s ease-in-out infinite;
+    border-radius: 5px;
+}
+
+@keyframes flutuar {
+    0% {
+        transform: translateZ(0);
+        
+
+    }
+
+    50% {
+        transform: scaleX(2);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
+
+
+.objecto {
+    width: 30px;
+    height: 30px;
+    animation: flutuar 0.8s ease-in-out infinite;
+}

@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Honk:MORF@15&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+:root {
+    --font-destaque: "Honk", system-ui;
+    --font-normal: "Audiowide", sans-serif;
+    --font-padrão: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color:  rgb(150, 135, 114);
+}
+
+section {
+    width: 500px;
+    height: 400px;
+    margin: auto;
+
+}
+
+section h2 {
+    margin-top: 30px;
+    text-align: center;
+}
+
+div {
+    text-align: center;
+    background-color: bisque;
+    margin-top: 20px;
+    padding: 10px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    transition: background-color 0.5s ease;
+
+}
+
+div:hover {
+    background-color: rgb(224, 181, 152);
+}
