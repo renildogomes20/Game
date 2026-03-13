@@ -20,11 +20,12 @@ body{
     background-image: url('../imagens/back4.jpeg');
     background-repeat: no-repeat;
     background-position: center center;
+    background-size: cover;
 }
 
 main {
     width: 98vw;
-    height: 98vh;
+    height: 99vh;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
@@ -110,5 +111,6 @@ p {
 footer p {
     text-align: center;
     color: rgba(255, 255, 255, 0.822);
-    margin-top: -40px;
+    font-size: 1em;
+    margin-top: -15px;
 }
