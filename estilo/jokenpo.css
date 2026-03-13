@@ -17,15 +17,17 @@
 }
 
 body{
+    background-attachment: fixed;
     background-image: url('../imagens/back4.jpeg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+    
 }
 
 main {
     width: 98vw;
-    height: 96.2vh;
+    height: 92vh;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
@@ -112,5 +114,5 @@ footer p {
     text-align: center;
     color: rgba(255, 255, 255, 0.822);
     font-size: 1em;
-    margin-top: px;
+    margin-bottom: 20px;
 }
