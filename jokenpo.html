@@ -10,9 +10,13 @@
     <section>
         <h1>JO KEN PÓ</h1>
         <div>
-            <p>O computador jogou</p>
-            <p>Sua vez!</p>
-            <p><label for="player">Insira um número de 1 á 3 <input type="number" name="player" id="player"> <input type="button" value="Jogar" onclick="jogar()"></label></p>
+            <div class="container">
+                <button id="pedra" class="button" type="button" onclick="clicouPedra(1)">Pedra</button>
+                <button id="papel" class="button" type="button" onclick="clicouPapel(2)">Papel</button>
+                <button id="tesoura" class="button" type="button" onclick="clicouTesoura(3)">Tesoura</button>
+            </div>
+
+            <p id="status"></p>
             <div id="res"></div>
             <p>
                 Quer continuar? [S/N]
