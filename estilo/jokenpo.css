@@ -20,11 +20,13 @@ body{
     background-image: url('../imagens/back4.jpeg');
     background-repeat: no-repeat;
     background-position: center center;
+    width: 97vw;
+    height: 97vh;
 }
 
 main {
-    width: 100vw;
-    height: 100vh;
+    width: 97vw;
+    height: 97vh;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
