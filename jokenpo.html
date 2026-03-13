@@ -7,28 +7,26 @@
     <link rel="stylesheet" href="estilo/jokenpo.css">
 </head>
 <body>
-    <section>
-        <h1>JO KEN PÓ</h1>
-        <div>
-            <div class="container">
-                <button id="pedra" class="button" type="button" onclick="clicouPedra(1)">Pedra</button>
-                <button id="papel" class="button" type="button" onclick="clicouPapel(2)">Papel</button>
-                <button id="tesoura" class="button" type="button" onclick="clicouTesoura(3)">Tesoura</button>
+    <main>
+        <section>
+            <h1>JO KEN PÓ</h1>
+            <div>
+                <div class="container">
+                    <button id="pedra" class="button" type="button" onclick="clicouPedra(1)">Stone</button>
+                    <button id="papel" class="button" type="button" onclick="clicouPapel(2)">Paper</button>
+                    <button id="tesoura" class="button" type="button" onclick="clicouTesoura(3)">Scissors</button>
+                </div>
+                <p id="status"></p>
+                <div id="res"></div>
+                
             </div>
-
-            <p id="status"></p>
-            <div id="res"></div>
-            <p>
-                Quer continuar? [S/N]
-                <label for="confS">
-                    Sim <input type="radio" name="conf" id="confS">
-                </label>
-                <label for="confN">
-                    Não <input type="radio" name="conf" id="confN">
-                </label>
-            </p>
-        </div>
-    </section>
+        </section>
+        
+    </main>
+    <footer>
+        <p>&copy; 2026 Renildo Gomes. All rights reserved </p>
+    </footer>
+    
     
 
 <script src="jokenpo.js"></script>

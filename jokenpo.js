@@ -10,7 +10,7 @@
         let playOption = valor
         let ale = Math.floor(Math.random() * 3) + 1
         if(ale==1) {
-            res.innerHTML="EMPATE"
+            res.innerHTML="DRAW"
             if (ale == 1) {comOption = `Pedra <img src="imagens/pedra.png" alt="" class="objecto"></img>`}
             if(playOption == 1) {playOption = `Pedra <img src="imagens/pedra.png" alt="" class="objecto"></img>`}
 
