@@ -8,6 +8,7 @@
 * {
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 
 :root {
@@ -22,30 +23,28 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top bottom;
-    width: 98vw;
+    
 }
 
 main {
-    position: relative;
-    width: 97vw;
-    height: 97vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 98vw;
+    height: 98vh;
     
 }
 
 section {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     text-align: center;
-    
     
 }
 
 section h1 {
     display: block;
     font-family: var(--font-destaque);
-    font-size: 11vw;
+    font-size: 10vw;
     color: rgb(244, 249, 244);
 }
 
@@ -95,6 +94,6 @@ section > p > a:hover {
 footer p {
     text-align: center;
     color: rgba(255, 255, 255, 0.822);
-    font-size: 2.5vw;
+    font-size: 1em;
     margin-top: -15px;
 }

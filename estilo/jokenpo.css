@@ -16,17 +16,15 @@
     --font-padrão: Arial, Helvetica, sans-serif;
 }
 
-body{
+/*body{
     background-image: url('../imagens/back4.jpeg');
     background-repeat: no-repeat;
     background-position: center center;
-    width: 97vw;
-    height: 97vh;
-}
+}*/
 
 main {
-    width: 97vw;
-    height: 97vh;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
@@ -34,6 +32,7 @@ main {
     background-image: url('../imagens/back4.jpeg');
     background-repeat: no-repeat;
     background-position: center center;
+    background-size: cover;
     
 }
 
