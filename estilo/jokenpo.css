@@ -29,7 +29,7 @@ main {
     width: 98vw;
     height: 92vh;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
     
@@ -108,6 +108,14 @@ p {
 
 #res {
     font-family: var(--font-normal);
+}
+#pedra, #papel, #tesoura, #interface {
+    display: none;
+}
+
+#cadastro {
+    height: 15vh;
+    margin-bottom: 10px;
 }
 
 footer p {
