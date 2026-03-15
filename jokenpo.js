@@ -1,6 +1,4 @@
 //function jogar() {
-    const sim = document.getElementById('confS')
-    const nao = document.getElementById('confN')
     const player = document.getElementById('player')
     const res = document.querySelector('div#res')
     const pedra=document.querySelector("#pedra")
