@@ -41,10 +41,10 @@ main {
 section {
     margin-right: auto;
     margin-left: auto;
-    background-color: rgba(192, 181, 120, 0.397);
+    background-color: rgba(192, 167, 120, 0.273);
     border-radius: 8px;
     padding: 10px;
-    height:50vh;
+    height:auto;
 }
 
 div {
