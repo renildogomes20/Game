@@ -34,8 +34,7 @@
             tesoura.style.display='none'
             screen.style.display='none'
             screen2.style.display='none'
-
-
+            
         }else {
             cont = Number(num.value)
             c = 0
