@@ -54,6 +54,14 @@ section {
     margin-left: auto;
     text-align: center;
 }
+
+#interface button {
+    margin-top: 7px;
+    padding: 4px 8px 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
 div {
     margin-top: 20px;
 }
@@ -174,6 +182,7 @@ p {
 #cadastro  label > input:focus {
     background-color: white;
 }
+
 #iname {
 
 }

@@ -31,6 +31,9 @@
         }else {
             cont = Number(num.value)
             c = 0
+            totalPlayerWins=0
+            totalComputerWins=0
+            totalEmpate=0
             screen.style.display='inline-block'
             screen2.style.display='none'
             pedra.style.display='inline-block'
