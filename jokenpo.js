@@ -4,13 +4,18 @@
     const pedra=document.querySelector("#pedra")
     const papel=document.querySelector("#papel")
     const tesoura=document.querySelector("#tesoura")
-    const res1 = document.querySelector("#status")
+    const res1 = document.querySelector("#resul")
     const nome=document.querySelector("#iname")
     const num=document.getElementById("inum")
     const screen=document.querySelector("#interface")
+    const story=document.querySelector("#story")
+    const screen2=document.querySelector("#status")
 
     let cont = Number(num.value)
     let c = 0
+    let totalPlayerWins=0
+    let totalComputerWins=0
+    let totalEmpate=0
     
 
     verificarNome=()=> {
@@ -20,11 +25,14 @@
             papel.style.display='none'
             tesoura.style.display='none'
             screen.style.display='none'
+            screen2.style.display='none'
+
 
         }else {
             cont = Number(num.value)
             c = 0
             screen.style.display='inline-block'
+            screen2.style.display='none'
             pedra.style.display='inline-block'
             papel.style.display='inline-block'
             tesoura.style.display='inline-block'
@@ -33,6 +41,7 @@
             tesoura.disabled=false;
             res1.innerHTML=""
             res.innerHTML=""
+            story.innerHTML=""
 
         }
     }
@@ -48,6 +57,7 @@
 
         }else if(ale==2) {
             res.innerHTML="Computador Ganhou!"
+            totalComputerWins+=1
             if(playOption == 1) {playOption = `Pedra <img src="imagens/pedra.png" alt="" class="objecto"></img>`}
             if (ale == 2) {comOption = `Papel <img src="imagens/papel.png" alt="" class="objecto"></img>`}
 
@@ -55,6 +65,7 @@
             if(playOption == 1) {playOption = `Pedra <img src="imagens/pedra.png" alt="" class="objecto"></img>`}
             if (ale == 3) {comOption = `Tesoura <img src="imagens/tesouras.png" alt="" class="objecto"></img>`}
             res.innerHTML=`${nome.value} Ganhou!`
+            totalPlayerWins+=1
         }
         res1.innerHTML = `<p>computador jogou ${comOption} </p>`
         res1.innerHTML += `<p> ${nome.value} jogou ${playOption}</p>`
@@ -63,7 +74,14 @@
             pedra.disabled=true;
             papel.disabled=true;
             tesoura.disabled=true;
-            res.innerHTML="FIM DO Jogo!"
+            res.innerHTML="Game OVER!"
+            clicouStatus=()=>{
+                screen.style.display='none'
+                screen2.style.display='inline-block'
+                story.innerHTML=`<p>You tried ${c} times</p>`
+                story.innerHTML+=`<p>${nome.value} won ${totalPlayerWins}</p>`
+                story.innerHTML+=`Computer won ${totalComputerWins}`
+            }
             return
         }else {
             res.innerHTML+=`<p>Você jogou ${c} vezes</p>`
@@ -77,14 +95,16 @@
             if(playOption == 2) {playOption = `Papel <img src="imagens/papel.png" alt="" class="objecto"></img>`}
             if (ale == 1) {comOption = `Pedra <img src="imagens/pedra.png" alt="" class="objecto"></img>`}
             res.innerHTML=`${nome.value} Ganhou!`
+            totalPlayerWins+=1
         }else if(ale==2) {
             if(playOption == 2) {playOption = `Papel <img src="imagens/papel.png" alt="" class="objecto"></img>`}
             if (ale == 2) {comOption = `Papel <img src="imagens/papel.png" alt="" class="objecto"></img>`}
-            res.innerHTML="EMPATE"
+            res.innerHTML="DRAW"
         }else if(ale==3) {
             if(playOption == 2) {playOption = `Papel <img src="imagens/papel.png" alt="" class="objecto"></img>`}
             if (ale == 3) {comOption = `Tesoura <img src="imagens/tesouras.png" alt="" class="objecto"></img>`}
             res.innerHTML="Computador Ganhou!"
+            totalComputerWins+=1
         }
         res1.innerHTML = `<p>computador jogou ${comOption} </p>`
         res1.innerHTML += `<p> ${nome.value} jogou ${playOption}</p>`
@@ -96,6 +116,13 @@
             papel.disabled=true;
             tesoura.disabled=true;
             res.innerHTML="FIM DO Jogo!"
+            clicouStatus=()=>{
+                screen.style.display='none'
+                screen2.style.display='inline-block'
+                story.innerHTML=`<p>You tried ${c} times</p>`
+                story.innerHTML+=`<p>${nome.value} won ${totalPlayerWins}</P>`
+                story.innerHTML+=`Computer won ${totalComputerWins}`
+            }
             return
         }else {
             res.innerHTML+=`<p>Você jogou ${c} vezes</p>`
@@ -109,14 +136,16 @@
             if(playOption == 3) {playOption = `Tesoura <img src="imagens/tesouras.png" alt="" class="objecto"></img>`}
             if (ale == 1) {comOption = `Pedra <img src="imagens/pedra.png" alt="" class="objecto"></img>`}
             res.innerHTML="Computador Ganhou!"
+            totalComputerWins+=1
         }else if(ale==2) {
             if(playOption == 3) {playOption = `Tesoura <img src="imagens/tesouras.png" alt="" class="objecto"></img>`}
             if (ale == 2) {comOption = `Papel <img src="imagens/papel.png" alt="" class="objecto"></img>`}
             res.innerHTML=`${nome.value} Ganhou!`
+            totalPlayerWins+=1
         }else if(ale==3) {
             if(playOption == 3) {playOption = `Tesoura <img src="imagens/tesouras.png" alt="" class="objecto"></img>`}
             if (ale == 3) {comOption = `Tesoura <img src="imagens/tesouras.png" alt="" class="objecto"></img>`}
-            res.innerHTML="EMPATE"
+            res.innerHTML="DRAW"
         }
         res1.innerHTML = `<p>computador jogou ${comOption} </p>`
         res1.innerHTML += `<p> ${nome.value} jogou ${playOption}</p>`
@@ -127,6 +156,13 @@
             papel.disabled=true;
             tesoura.disabled=true;
             res.innerHTML="FIM DO Jogo!"
+            clicouStatus=()=>{
+                screen.style.display='none'
+                screen2.style.display='inline-block'
+                story.innerHTML=`<p>You tried ${c} times</p>`
+                story.innerHTML+=`<p>${nome.value} won ${totalPlayerWins}</p>`
+                story.innerHTML+=`Computer won ${totalComputerWins}`
+            }
             return
         }else {
             res.innerHTML+=`<p>Você jogou ${c} vezes</p>`

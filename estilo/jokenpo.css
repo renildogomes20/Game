@@ -41,12 +41,19 @@ main {
 section {
     margin-right: auto;
     margin-left: auto;
-    background-color: rgba(192, 167, 120, 0.273);
+    background-color: rgba(189, 133, 30, 0.273);
     border-radius: 8px;
-    padding: 10px;
+    
     height:auto;
 }
 
+#interface {
+    padding: 10px;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
 div {
     margin-top: 20px;
 }
@@ -97,7 +104,7 @@ h1 {
     box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.269);
     margin: 1px;
     font-family: var(--font-normal);
-    margin-bottom: 18px;
+    margin-bottom: 2px;
 }
 
 .button:hover {
@@ -107,12 +114,15 @@ h1 {
 
 p {
     font-family: var(--font-normal);
+    text-shadow: 3px 4px 3px rgba(0, 0, 0, 0.244);
 }
 
 #res {
+    margin-left: -25px;
     font-family: var(--font-normal);
+    text-shadow: 3px 4px 3px rgba(0, 0, 0, 0.244);
 }
-#pedra, #papel, #tesoura, #interface {
+#pedra, #papel, #tesoura, #interface, #status{
     display: none;
 }
 
@@ -121,7 +131,8 @@ p {
     width: 68vw;
     margin-bottom: 10px;
     box-shadow: 4px 5px 6px rgba(0, 0, 0, 0.366);
-    
+    padding: 10px;
+    text-shadow: 3px 4px 3px rgba(0, 0, 0, 0.291);
     
 }
 
@@ -129,13 +140,13 @@ p {
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
-    align-items: center;
-    background-color: rgba(155, 191, 205, 0.14);
+    align-items: center;   
     padding: 4px;
     margin-top: -6px;
 }
 
 #cadastro  label > input {
+    flex: auto;
     border-radius: 4px;
     padding: 3px;
     margin: 4px;
@@ -168,6 +179,18 @@ p {
 }
 #inum {
     width: 60px;
+}
+
+#status {
+    padding:10px;
+    margin: px;
+    height: auto;
+    width: 70vw;
+    color: rgb(232, 226, 226);
+    text-shadow: 4px 3px 5px black;
+}
+#status p {
+    line-height: 1.4em;
 }
 
 footer p {
