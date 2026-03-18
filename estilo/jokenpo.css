@@ -156,10 +156,10 @@ p {
 }
 
 #cadastro  label > input {
+    flex: auto;
     border-radius: 4px;
     padding: 3px;
     margin: 4px;
-    width: 100vw;
     border: 1px solid rgba(0, 0, 0, 0.663);
     background-color: rgb(227, 227, 226);
 }
