@@ -20,8 +20,8 @@
     reaction=(condicao)=> {
         if(condicao) {
             return "&#x1F60E;"
-        }else {
-            return "&#x1F61E;"
+        }else{
+            return "&#x1F91D;"
         }
     }
     
@@ -92,6 +92,7 @@
                 screen2.style.display='inline-block'
                 story.innerHTML=`<p>You tried ${c} times</p>`
                 story.innerHTML+=`<p>${nome.value} won ${totalPlayerWins} ${reaction(totalPlayerWins>totalComputerWins)}</p>`
+
                 story.innerHTML+=`<p>Computer won ${totalComputerWins} ${reaction(totalComputerWins>totalPlayerWins)}</p>`
                 story.innerHTML+=`There was ${totalDraw} Draw(s) &#x2696;`
             }
