@@ -156,7 +156,6 @@ p {
 }
 
 #cadastro  label > input {
-    flex: auto;
     border-radius: 4px;
     padding: 3px;
     margin: 4px;
@@ -186,10 +185,11 @@ p {
 }
 
 #iname {
+    width: 150px;
 
 }
 #inum {
-    width: 60px;
+    width: 130px;
 }
 
 #status {
