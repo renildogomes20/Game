@@ -156,7 +156,7 @@ p {
 }
 
 #cadastro  label > input {
-    flex: auto;
+    flex: 1 1 80px;
     border-radius: 4px;
     padding: 3px;
     margin: 4px;
