@@ -165,7 +165,7 @@ p {
 
 #cadastro button {
     padding: 4px 20px 4px 20px;
-    margin:0px 0px 0px 6px;
+    margin:10px 0px 0px 6px;
     box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.349);
     border-radius: 4px;
     border: none;
@@ -185,7 +185,7 @@ p {
 }
 
 #iname {
-    width: 150px;
+    width: 152px;
 
 }
 #inum {
@@ -196,7 +196,7 @@ p {
     padding:10px;
     margin: px;
     height: auto;
-    width: 70vw;
+    width: 68vw;
     
     text-shadow: 4px 3px 5px black;
 }
@@ -210,4 +210,24 @@ footer p {
     color: rgba(255, 255, 255, 0.822);
     font-size: 1em;
     margin-bottom: 20px;
+}
+
+@media screen and (min-width:768px) and (max-width:992px) {
+    main {
+        display: flex;
+        flex-flow: row nowrap;
+
+    }
+
+    #cadastro {
+        width: 35vw;
+    }
+
+    #interface {
+        display: inline-block;
+    }
+
+    #status {
+        width: 35vw;
+    } 
 }

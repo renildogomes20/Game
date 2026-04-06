@@ -20,9 +20,15 @@
     reaction=(condicao)=> {
         if(condicao) {
             return "&#x1F60E;"
-        }else{
+        }else {
+            return "&#x1F61D;"
+        }/*else if(condicao){
             return "&#x1F91D;"
-        }
+        }*/
+
+        /*}else {
+            return "&#x1F91D"
+        }*/
     }
     
 
@@ -67,7 +73,7 @@
             if(playOption == 1) {playOption = `stone <img src="imagens/pedra.png" alt="" class="objecto"></img>`}
 
         }else if(ale==2) {
-            res.innerHTML="Computer played!"
+            res.innerHTML="Computer won!"
             totalComputerWins+=1
             if(playOption == 1) {playOption = `stone <img src="imagens/pedra.png" alt="" class="objecto"></img>`}
             if (ale == 2) {comOption = `paper <img src="imagens/papel.png" alt="" class="objecto"></img>`}
@@ -91,9 +97,9 @@
                 screen.style.display='none'
                 screen2.style.display='inline-block'
                 story.innerHTML=`<p>You tried ${c} times</p>`
-                story.innerHTML+=`<p>${nome.value} won ${totalPlayerWins} ${reaction(totalPlayerWins>totalComputerWins)}</p>`
+                story.innerHTML+=`<p>${nome.value} won ${totalPlayerWins} ${reaction(totalPlayerWins> totalComputerWins)}</p>`
 
-                story.innerHTML+=`<p>Computer won ${totalComputerWins} ${reaction(totalComputerWins>totalPlayerWins)}</p>`
+                story.innerHTML+=`<p>Computer won ${totalComputerWins} ${reaction(totalPlayerWins< totalComputerWins)}</p>`
                 story.innerHTML+=`There was ${totalDraw} Draw(s) &#x2696;`
             }
             return
@@ -136,7 +142,9 @@
                 screen.style.display='none'
                 screen2.style.display='inline-block'
                 story.innerHTML=`<p>You tried ${c} times</p>`
-                story.innerHTML+=`<p>${nome.value} won ${totalPlayerWins} ${reaction(totalPlayerWins>totalComputerWins)}</P>`
+                story.innerHTML+=`<p>${nome.value} won ${totalPlayerWins} ${reaction(totalPlayerWins> totalComputerWins)}</p>`
+                
+
                 story.innerHTML+=`<p>Computer won ${totalComputerWins} ${reaction(totalPlayerWins<totalComputerWins)}</p>`
                 story.innerHTML+=`There was ${totalDraw} Draw(s) &#x2696;`
             }
@@ -181,7 +189,7 @@
                 screen2.style.display='inline-block'
                 story.innerHTML=`<p>You tried ${c} times</p>`
                 story.innerHTML+=`<p>${nome.value} won ${totalPlayerWins} ${reaction(totalPlayerWins>totalComputerWins)}</p>`
-                story.innerHTML+=`<p>Computer won ${totalComputerWins} ${reaction(totalPlayerWins<totalComputerWins)}</p>`
+                story.innerHTML+=`<p>Computer won ${totalComputerWins} ${reaction (totalPlayerWins<totalComputerWins)} </p>`
                 story.innerHTML+=`There was ${totalDraw} Draw(s) &#x2696;`
             }
             return
