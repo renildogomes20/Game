@@ -30,6 +30,16 @@
             return "&#x1F91D"
         }*/
     }
+
+    clicouStatus=()=>{
+        screen.style.display='none'
+        screen2.style.display='inline-block'
+        story.innerHTML=`<p>You tried ${c} times</p>`
+        story.innerHTML+=`<p>${nome.value} won ${totalPlayerWins} ${reaction(totalPlayerWins> totalComputerWins)}</p>`
+
+        story.innerHTML+=`<p>Computer won ${totalComputerWins} ${reaction(totalPlayerWins< totalComputerWins)}</p>`
+        story.innerHTML+=`There was ${totalDraw} Draw(s) &#x2696;`
+    }
     
 
     verificarNome=()=> {
@@ -93,15 +103,8 @@
             tesoura.disabled=true;
             res.innerHTML=`<p>You played ${c} times</p>`
             res.innerHTML+="Game OVER!"
-            clicouStatus=()=>{
-                screen.style.display='none'
-                screen2.style.display='inline-block'
-                story.innerHTML=`<p>You tried ${c} times</p>`
-                story.innerHTML+=`<p>${nome.value} won ${totalPlayerWins} ${reaction(totalPlayerWins> totalComputerWins)}</p>`
 
-                story.innerHTML+=`<p>Computer won ${totalComputerWins} ${reaction(totalPlayerWins< totalComputerWins)}</p>`
-                story.innerHTML+=`There was ${totalDraw} Draw(s) &#x2696;`
-            }
+            clicouStatus()
             return
         }else {
             res.innerHTML+=`<p>You played ${c} times</p>`
@@ -138,16 +141,7 @@
             tesoura.disabled=true;
             res.innerHTML=`<p>You played ${c} times</p>`
             res.innerHTML+="Game OVER!"
-            clicouStatus=()=>{
-                screen.style.display='none'
-                screen2.style.display='inline-block'
-                story.innerHTML=`<p>You tried ${c} times</p>`
-                story.innerHTML+=`<p>${nome.value} won ${totalPlayerWins} ${reaction(totalPlayerWins> totalComputerWins)}</p>`
-                
-
-                story.innerHTML+=`<p>Computer won ${totalComputerWins} ${reaction(totalPlayerWins<totalComputerWins)}</p>`
-                story.innerHTML+=`There was ${totalDraw} Draw(s) &#x2696;`
-            }
+            clicouStatus()
             return
         }else {
             res.innerHTML+=`<p>You played ${c} times</p>`
@@ -184,77 +178,10 @@
             res.innerHTML=`<p>You played ${c} times</p>`
             res.innerHTML+="Game OVER!"
            
-            clicouStatus=()=>{
-                screen.style.display='none'
-                screen2.style.display='inline-block'
-                story.innerHTML=`<p>You tried ${c} times</p>`
-                story.innerHTML+=`<p>${nome.value} won ${totalPlayerWins} ${reaction(totalPlayerWins>totalComputerWins)}</p>`
-                story.innerHTML+=`<p>Computer won ${totalComputerWins} ${reaction (totalPlayerWins<totalComputerWins)} </p>`
-                story.innerHTML+=`There was ${totalDraw} Draw(s) &#x2696;`
-            }
+            clicouStatus()
             return
         }else {
             res.innerHTML+=`<p>You played ${c} times</p>`
         }
     }
    
-
-
-    /*if (sim.checked) {
-        let comOption;
-        let playOption;
-        let playnum = Number(player.value)
-        
-       
-        /* configuração para modo COM 
-        if (ale == 1) {comOption = `Pedra <img src="../imagens/pedra.png" alt="" class="objecto"></img>`}
-        if (ale == 2) {comOption = `Papel <img src="../imagens/papel.png" alt="" class="objecto"></img>`}
-        if (ale == 3) {comOption = `Tesoura <img src="../imagens/tesouras.png" alt="" class="objecto"></img>`}
-        res.innerHTML = `<p>computador jogou ${comOption} </p>`
-        
-        if(playnum == 1) {playOption = `Pedra <img src="../imagens/pedra.png" alt="" class="objecto"></img>`}
-        if(playnum == 2) {playOption = `Papel <img src="../imagens/papel.png" alt="" class="objecto"></img>`}
-        if(playnum == 3) {playOption = `Tesoura <img src="../imagens/tesouras.png" alt="" class="objecto"></img>`}
-        res.innerHTML += `<p> jogador jogou ${playOption}`
-
-        /*win Draw Lost*
-        if (ale == 1) {
-            if (playnum == 1) {
-                res.innerHTML += `<p><strong>EMPATE!</strong></p>`
-            }
-            if (playnum == 2) {
-                res.innerHTML += `<p> Jogador <strong>Ganhou!</strong></p>`
-            }
-            if (playnum == 3) {
-                res.innerHTML += `<p> COMPUTADOR <strong>Ganhou!</strong></p>`
-            }
-        }else if (ale==2) {
-            if (playnum == 1) {
-                res.innerHTML += `<p>COMPUTADOR <strong>Ganhou!</strong></p>`
-            }
-            if (playnum == 2) {
-                res.innerHTML += `<p><strong>EMPATE</strong></p>`
-            }
-            if (playnum == 3) {
-                res.innerHTML += `<p>Jogador <strong>Ganhou!</strong></p>`
-            }
-        }else if (ale==3) {
-            if (playnum == 1) {
-                res.innerHTML += `<p>Jogador <strong>Ganhou!</strong></p>`
-            }
-            if (playnum == 2) {
-                res.innerHTML += `<p> COMPUTADOR <strong>Ganhou!</strong></p>`
-            }
-            if (playnum ==3) {
-                res.innerHTML += `<p> EMPATE!</p>`
-            }
-        } 
-
-    }
-    if (nao.checked) {
-        res.innerHTML = 'Game Over!'
-        window.document.body.h1.style.display ='none'
-
-    }*/
-    
-//}

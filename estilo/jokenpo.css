@@ -29,13 +29,14 @@ body{
 }
 
 main {
+    display: grid;
+    grid-template-columns: 1fr 90 1fr;
     width: 98vw;
     height: 92vh;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    
 }
 
 section {
